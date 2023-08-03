@@ -1,6 +1,7 @@
 import MainPost from "@/components/main-post";
 import { getBlogPosts } from "@/sanity/sanity-utils";
 
+
 async function Blog() {
 
     const posts = await getBlogPosts();
