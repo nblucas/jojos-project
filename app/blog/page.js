@@ -1,37 +1,37 @@
 import MainPost from "@/components/main-post";
+import Post from "@/components/post";
 import { getBlogPosts } from "@/sanity/sanity-utils";
+import Link from "next/link";
 
 
 async function Blog() {
 
     const posts = await getBlogPosts();
 
-    //console.log(posts)
-
     const mainPost = posts.filter((value) => value.creationId === 1)
 
-    console.log(mainPost);
+    const [{ slug }] = mainPost;
 
     return (
         <section>
             <h1>Blog</h1>
             <div>
-                {mainPost.map((value) => {
-                    const {name, image, author, date, content} = value;
-                    return (
-                        <MainPost name={name} image={image} author={author} date={date} content={content} />
-                    );
-                })}
+                <Link href={`/blog/${slug}`}>
+                    {mainPost.map((value) => {
+                        const {name, image, author, date, content} = value;
+                        return (
+                            <MainPost name={name} image={image} author={author} date={date} content={content} />
+                        );
+                    })}
+                </Link>
                 <div>
                     <ul>
-                        <li>
-                            <img src="" alt="" />
-                            <p>texto 1</p>
-                        </li>
-                        <li>
-                            <img src="" alt="" />
-                            <p>texto 2</p>
-                        </li>
+                        {posts.map((value) => {
+                            const {name, secundaryImage} = value;
+                            return (
+                                <Post name={name} image={secundaryImage}/>
+                            );
+                        })}
                     </ul>
                 </div>
             </div>

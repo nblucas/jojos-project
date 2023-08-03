@@ -6,6 +6,7 @@ import Modal from "@/components/modal";
 const Forms = () => {
 
     const [isShowingModal, setIsShowingModal] = useState(false);
+    const [formValues, setFormValues] = useState({fullName: "", email: "", portfolio: "", motivation: ""});
 
     const modalRef = useRef(null);
 
@@ -24,9 +25,19 @@ const Forms = () => {
 
     }, [modalRef]);
 
+    const cleanInputFields = () => {
+        setFormValues({fullName: "", email: "", portfolio: "", motivation: ""});
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
         setIsShowingModal(true);
+        cleanInputFields();
+    }
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormValues((prevData) => ({...prevData, [name]: value}));
     }
 
     return(
@@ -36,19 +47,19 @@ const Forms = () => {
                 <form onSubmit={handleSubmit}>
                     <div>
                         <label htmlFor="name">Nome:</label>
-                        <input type="text" id="name" name="name"/>
+                        <input type="text" id="name" name="fullName" value={formValues.fullName} onChange={handleChange} required/>
                     </div>
                     <div>
                         <label htmlFor="email">Email:</label>
-                        <input type="email" id="email" name="email"/>
+                        <input type="email" id="email" name="email" value={formValues.email} onChange={handleChange} required/>
                     </div>
                     <div>
                         <label htmlFor="portfolio">Link para portfólio: </label>
-                        <input type="url" id="portfolio" name="portfolio"/>
+                        <input type="text" id="portfolio" name="portfolio" value={formValues.portfolio} onChange={handleChange} required/>
                     </div>
                     <div>
                         <label htmlFor="motivation">Por que você quer fazer parte da Jojos?</label>
-                        <input type="text" id="motivation" name="motivation"/>
+                        <input type="text" id="motivation" name="motivation" value={formValues.motivation} onChange={handleChange} required/>
                     </div>
                     <button type="submit">Enviar formulário</button>
                 </form>

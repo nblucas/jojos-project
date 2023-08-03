@@ -6,7 +6,7 @@ const MainPost = (props) => {
 
     return (
         <div>
-            <img src="" alt="" />
+            <img src={image} alt="image of a tiny computer surrounded of other eletronics" />
             <div>
                 <h2>{name}</h2>
                 <p>Por {author}, {date}</p>
