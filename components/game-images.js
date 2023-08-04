@@ -7,11 +7,15 @@ const GameImages = () => {
 
     return(
         <section>
-            <Link href="/pacman"><img src="/static/images/pacman.svg" alt="Big image with Pacman game" /></Link>
-            <div>
-                <Link href="/pacman"><img src="/static/images/pacman.svg" alt="Small image with Pacman game" /></Link>
-                <img src="/static/images/tetris.svg" alt="Tetris game" />
-                <img src="/static/images/asteroids.svg" alt="Asteroids game" />
+            <Link href="/pacman">
+                <img src="/static/images/pacman.svg" alt="Big image with Pacman game" className="main-image-games" />
+            </Link>
+            <div className="flex justify-between gap-games">
+                <Link href="/pacman" className="secundary-images-games">
+                    <img src="/static/images/pacman.svg" alt="Small image with Pacman game" className="secundary-games-with-link"/>
+                </Link>
+                <img src="/static/images/tetris.svg" alt="Tetris game" className="secundary-images-games" />
+                <img src="/static/images/asteroids.svg" alt="Asteroids game" className="secundary-images-games" />
             </div>
         </section>
     );

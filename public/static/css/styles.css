@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --midnight-x: #023047; 
+    --sunrise-x: #FA8400;
+    font-size: 16px;
+}
+
+html {
+    background-color: var(--midnight-x);
+}
+
+body {
+    margin: 6.25rem;
+    max-width: 90rem;
+}
+
+nav {
+    height: 30.6875rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+nav ul {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    gap: 4.25rem;
+}
+
+.header {
+    height: 9.5rem;
+}
+
+.logo {
+    height: 2.5rem;
+    margin-right: .83125rem;
+}
+
+.title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2.5rem;
+}
+
+.carrer-btn {
+    padding: 0.625rem 1.25rem;
+    background-color: var(--sunrise-x);
+    color: var(--midnight-x);
+}
+
+.main-image-games {
+    width: 100%;
+    margin-bottom: 1.25rem;
+}
+
+.secundary-images-games {
+    width: 33.3%;
+}
+
+.secundary-games-with-link {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gap-games {
+    gap: 0.5vw;
+}
+
+.about-us-p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+}
+
+.about-us-gap {
+    gap: 2rem;
+}
+
+.about-us-title-margin {
+    margin: 7rem 0 1rem 0;
+}
+
+.tags-gap {
+    gap: .5rem;
+}
+
+.tag {
+    padding: 0.25rem .5rem;
+    border: 0.1rem solid #DFDFE4;
+    border-radius: .5rem;
+    font-size: 1rem;
+}
+
+.carrer-square {
+    padding: 1.5rem;
+    border: 0.2rem solid #DFDFE4;
+}
+
+.montserrat-font {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.white-font {
+    color: #fff;
+}
+
+.grey-font {
+    color: #DFDFE4;
+}
+
+.sunrise-font {
+    color: var(--sunrise-x);
+}
+
+.no-decoration {
+    text-decoration: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-start {
+    justify-content: start;
+}
+
+.fifty-fifty {
+    width: 50%;
+}
+
+.cover-div {
+    object-fit: cover;
+}
+
+.indent {
+    text-indent: 2rem;
+}

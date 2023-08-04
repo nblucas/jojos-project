@@ -37,8 +37,8 @@ const Carrer = () => {
     ];
 
     return (
-        <section id="carrer-container">
-            <h1>Carreira</h1>
+        <section id="carrer-container" className="grey-font montserrat-font">
+            <h1 className="title sunrise-font text-center about-us-title-margin">Carreira</h1>
             <div>
                 {allCarrers.map((value) => {
                     const {id, carrerName, firstTag, secondTag} = value;

@@ -4,7 +4,7 @@ import Logo from "./logo.js";
 const Header = () => {
 
     return (
-        <header>
+        <header className="header flex justify-between">
             <Logo />
             <Navbar />
         </header>
