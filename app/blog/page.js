@@ -20,18 +20,18 @@ async function Blog() {
             <div>
                 <Link href={`/blog/${slug}`} className="no-decoration carrer-link">
                     {mainPost.map((value) => {
-                        const {name, image, author, date, contentPreview} = value;
+                        const {name, image, author, date, creationId, contentPreview} = value;
                         return (
-                            <MainPost name={name} image={image} author={author} date={date} contentPreview={contentPreview} />
+                            <MainPost name={name} image={image} author={author} date={date} contentPreview={contentPreview} key={creationId}/>
                         );
                     })}
                 </Link>
                 <div className="medium-margin-top">
                     <ul className="grid grid-column-three-even small-gap">
                         {sortedPosts.map((value) => {
-                            const {name, secundaryImage} = value;
+                            const {name, secundaryImage, creationId} = value;
                             return (
-                                <Post name={name} image={secundaryImage}/>
+                                <Post name={name} image={secundaryImage} key={creationId} />
                             );
                         })}
                     </ul>
