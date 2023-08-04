@@ -39,10 +39,11 @@ const Carrer = () => {
     return (
         <section id="carrer-container" className="grey-font montserrat-font">
             <h1 className="title sunrise-font text-center about-us-title-margin">Carreira</h1>
-            <div>
+            <div className="grid grid-column-three-even small-gap">
                 {allCarrers.map((value) => {
                     const {id, carrerName, firstTag, secondTag} = value;
-                    return id === 1 ? <Link href="/forms"><CarrerCard id={id} carrerName={carrerName} firstTag={firstTag} secondTag={secondTag} /></Link> : <CarrerCard id={id} carrerName={carrerName} firstTag={firstTag} secondTag={secondTag} />
+                    
+                    return id === 1 ? <Link className="no-decoration" href="/forms"><CarrerCard key={id} id={id} carrerName={carrerName} firstTag={firstTag} secondTag={secondTag} /></Link> : <CarrerCard key={id}id={id} carrerName={carrerName} firstTag={firstTag} secondTag={secondTag} />
                 })}
             </div>
         </section>

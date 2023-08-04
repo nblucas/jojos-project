@@ -36,6 +36,10 @@ nav ul {
     gap: 4.25rem;
 }
 
+a, a:visited, a:hover, a:active {
+  color: inherit;
+}
+
 .header {
     height: 9.5rem;
 }
@@ -104,6 +108,14 @@ nav ul {
     border: 0.2rem solid #DFDFE4;
 }
 
+.carrer-hovered {
+    border-color: var(--sunrise-x);
+}
+
+.carrer-hovered .carrer-name {
+    color: var(--sunrise-x);
+}
+
 .montserrat-font {
     font-family: 'Montserrat', sans-serif;
 }
@@ -154,4 +166,20 @@ nav ul {
 
 .indent {
     text-indent: 2rem;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-column-three-even {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.small-gap {
+    gap: 1rem;
+}
+
+.hover-color-sunrise:hover{
+    color: var(--sunrise-x);
 }
