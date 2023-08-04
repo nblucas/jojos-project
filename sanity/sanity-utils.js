@@ -20,7 +20,8 @@ export async function getBlogPosts() {
             url,
             author,
             date,
-            content
+            content,
+            contentPreview
         }`
     )
 

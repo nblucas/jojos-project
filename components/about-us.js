@@ -2,7 +2,7 @@ const AboutUs = () => {
 
     return (
         <section id="about-us-container">
-            <h1 className="title sunrise-font text-center about-us-title-margin">Sobre Nós</h1>
+            <h1 className="title sunrise-font text-center title-margin">Sobre Nós</h1>
             <div className="flex justify-between about-us-gap">
                 <div className="fifty-fifty about-us-p flex flex-direction-column justify-between white-font">
                     <p className="indent">

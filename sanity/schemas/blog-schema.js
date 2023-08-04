@@ -67,7 +67,12 @@ const blogSchema = {
             title: 'Content', 
             type: 'array', 
             of: [{type: 'block'}]
-          }
+        },
+        {
+            name: "contentPreview",
+            title: "Content Preview",
+            type: "string"
+        }
     ]
 }
 

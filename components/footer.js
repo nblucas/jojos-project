@@ -1,7 +1,7 @@
 const Footer = () => {
     
     return (
-        <footer>
+        <footer className="flex justify-center align-items-center montserrat-font white-font">
             <h4>&copy; JOJOS GAME STUDIO. ALL RIGHTS RESERVED</h4>
         </footer>
     );

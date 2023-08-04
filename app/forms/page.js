@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Modal from "@/components/modal";
+import "@/public/static/css/styles.css"
 
 const Forms = () => {
 
@@ -43,28 +44,28 @@ const Forms = () => {
     return(
         <section>
             <div>
-                <h1>Formulário de Vaga</h1>
-                <form onSubmit={handleSubmit}>
-                    <div>
+                <h1 className="title sunrise-font text-center title-bottom-margin">Formulário de Vaga</h1>
+                <form onSubmit={handleSubmit} className="flex flex-direction-column align-items-center justify-center medium-gap medium-margin-top">
+                    <div className="flex flex-direction-column justify-start input-label montserrat-font twenty-pixels grey-font smaller-gap">
                         <label htmlFor="name">Nome:</label>
-                        <input type="text" id="name" name="fullName" value={formValues.fullName} onChange={handleChange} required/>
+                        <input type="text" id="name" name="fullName" value={formValues.fullName} onChange={handleChange} required className="montserrat-font grey-font"/>
                     </div>
-                    <div>
+                    <div className="flex flex-direction-column justify-start input-label montserrat-font twenty-pixels grey-font smaller-gap">
                         <label htmlFor="email">Email:</label>
-                        <input type="email" id="email" name="email" value={formValues.email} onChange={handleChange} required/>
+                        <input type="email" id="email" name="email" value={formValues.email} onChange={handleChange} required className="montserrat-font grey-font"/>
                     </div>
-                    <div>
+                    <div className="flex flex-direction-column justify-start input-label montserrat-font twenty-pixels grey-font smaller-gap">
                         <label htmlFor="portfolio">Link para portfólio: </label>
-                        <input type="text" id="portfolio" name="portfolio" value={formValues.portfolio} onChange={handleChange} required/>
+                        <input type="text" id="portfolio" name="portfolio" value={formValues.portfolio} onChange={handleChange} required className="montserrat-font grey-font"/>
                     </div>
-                    <div>
+                    <div className="flex flex-direction-column justify-start input-label montserrat-font twenty-pixels grey-font smaller-gap">
                         <label htmlFor="motivation">Por que você quer fazer parte da Jojos?</label>
-                        <input type="text" id="motivation" name="motivation" value={formValues.motivation} onChange={handleChange} required/>
+                        <textarea id="motivation" name="motivation" value={formValues.motivation} onChange={handleChange} required className="montserrat-font grey-font"/>
                     </div>
-                    <button type="submit">Enviar formulário</button>
+                    <button type="submit" className="montserrat-font">Enviar formulário</button>
                 </form>
             </div>
-            <div ref={modalRef} style={{backgroundColor: "red"}}>
+            <div ref={modalRef} className="flex justify-center align-items-center">
                 {isShowingModal && <Modal />}
             </div>
         </section>

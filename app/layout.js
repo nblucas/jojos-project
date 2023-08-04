@@ -10,8 +10,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Header />
-        {children}
+        <div className="follow-margin">
+          <Header />
+          {children}
+        </div>
         <Footer />
       </body>
     </html>

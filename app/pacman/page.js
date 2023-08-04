@@ -1,14 +1,16 @@
+import "@/public/static/css/styles.css"
+
 const Pacman = () => {
 
     return(
         <section>
-            <h1>Pacman</h1>
-            <img src="/static/images/pacman.svg" alt="Big image with Pacman game" />
-            <div>
-                <p>Valor: R$ 10,00</p>
-                <button>Comprar</button>
+            <h1 className="title sunrise-font text-center title-bottom-margin">Pacman</h1>
+            <img src="/static/images/pacman.svg" alt="Big image with Pacman game" className="main-image-games"/>
+            <div className="flex justify-start medium-gap align-items-center smaller-margin-top">
+                <p className="montserrat-font white-font twenty-pixels">Valor: R$ 10,00</p>
+                <button className="carrer-btn montserrat-font">Comprar</button>
             </div>
-            <div>
+            <div className="montserrat-font white-font twenty-pixels flex flex-direction-column justify-between line-height small-margin-top small-gap">
                 <p>
                     Pac-Man é um clássico jogo de arcade lançado em 1980. Os jogadores assumem o controle de Pac-Man, um personagem amarelo redondo, e seu objetivo é comer todos os pontos em um labirinto enquanto evita os fantasmas coloridos que o perseguem. Ao comer pontos especiais, os fantasmas se tornam vulneráveis e podem ser engolidos por Pac-Man para ganhar pontos extras. Com sua jogabilidade simples e viciante, Pac-Man conquistou milhões de jogadores e se tornou um fenômeno cultural, com seu personagem e design visual se tornando ícones da cultura pop.
                 </p>
